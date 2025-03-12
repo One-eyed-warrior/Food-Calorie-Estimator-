@@ -1,0 +1,7 @@
+streamlit
+pillow
+plotly
+requests
+numpy
+tflite-runtime
+python-dotenv

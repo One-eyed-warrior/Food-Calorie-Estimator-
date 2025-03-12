@@ -1,0 +1,60 @@
+/* Custom styles for the nutrition tracker */
+div.stButton > button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75rem;  /* Increased padding for better touch targets */
+    border-radius: 0.3rem;
+    font-size: 1rem;   /* Ensure readable text size on mobile */
+}
+
+div.stButton > button:hover {
+    background-color: #45a049;
+}
+
+div.stMetric {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;  /* Added margin for better spacing on mobile */
+}
+
+div[data-testid="stForm"] {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* Styling for charts */
+div[data-testid="stPlotlyChart"] > div {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    max-width: 100%;    /* Ensure charts don't overflow on mobile */
+    overflow-x: auto;   /* Allow horizontal scrolling if needed */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    div.stMetric {
+        font-size: 0.9rem;  /* Slightly smaller text on mobile */
+    }
+
+    /* Ensure inputs are large enough to tap */
+    div.stNumberInput input, 
+    div.stTextInput input, 
+    div.stSelectbox select {
+        min-height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    /* Improve spacing for mobile */
+    .st-emotion-cache-1r6slb0 {  /* Streamlit's column class */
+        padding: 0.25rem !important;
+    }
+}
